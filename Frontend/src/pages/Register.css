@@ -1,0 +1,113 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e0f7f7, #f8ffff);
+  padding: 30px;
+}
+
+.register-box {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.register-left {
+  flex: 1;
+  background: linear-gradient(to bottom right, #47afaf, #044f49);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-left img {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+}
+
+.register-right {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.register-right h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #047e7e;
+}
+.register-right .input-group {
+  position: relative;
+  margin: 10px 0;
+}
+
+.register-right .input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #008080;
+  font-size: 16px;
+}
+
+.register-right .input-group input{
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.register-right .input-group input:focus , .register-select:focus {
+  border-color: #20c997;
+  box-shadow: 0 0 5px #b2dfdb;
+}
+.register-select{
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 0px 12px 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.signup-btn {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #047e7e;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #035e5e;
+}
+
+.register-right p {
+  margin-top: 20px;
+  color: #333;
+}
+
+.register-right a {
+  color: #047e7e;
+  text-decoration: none;
+  font-weight: 500;
+}

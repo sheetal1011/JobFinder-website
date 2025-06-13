@@ -1,0 +1,125 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e0f7f7, #f8ffff);
+  padding: 30px;
+}
+
+.login-box {
+  display: flex;
+  width: 900px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.login-left {
+  flex: 1;
+  background: linear-gradient(to bottom right, #47afaf, #044f49);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px;
+}
+
+.login-left img {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+}
+
+.login-right {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.05);
+}
+.login-right h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #047e7e;
+}
+
+
+
+/* Input Group with Icons */
+.input-group {
+  position: relative;
+  margin: 15px 0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #008080;
+  box-shadow: 0 0 5px #a7e0e0;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #008080;
+}
+
+/* Remember Me & Forgot Password */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.login-options a {
+  color: #008080;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.loginform-btn {
+  margin-top: 20px;
+  padding: 12px;
+  background: #008080;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.loginform-btn:hover {
+  background: #006666;
+}
+
+.login-right p {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-right a {
+  color: #008080;
+  text-decoration: none;
+  font-weight: bold;
+}

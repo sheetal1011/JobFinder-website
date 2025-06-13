@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  background: #068a8a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left .nav-links {
+  display: flex;
+  gap: 17px;
+}
+
+.nav-left .nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-left .nav-links a:hover {
+  color: #b2dfdb;
+}
+
+
+.nav-left .burger {
+  display: none;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.nav-center .logo {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0 0 9px #e8efed;
+}
+
+.nav-right .btn{
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: 2px solid #f4f6f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-btn , .register-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2.1px solid #ffffff;
+  
+}
+
+.login-btn:hover , .register-btn:hover {
+  background-color: #ffffff;
+  color: #085757;
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-left .burger {
+    display: block;
+  }
+   
+
+  .nav-left .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    right: 15px;
+    flex-direction: column;
+    background:linear-gradient(#47afaf,#044f49);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .nav-left .nav-links.show {
+    display: flex;
+  }
+}
