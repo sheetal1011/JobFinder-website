@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Browsejobs from './pages/Browsejobs';
+import JobSeekerDashboard from './pages/jobseekerDashboard';
+import RecruiterDashboard from './pages/recruiterDashboard';
+import PostJob from './pages/PostJob';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
      <Route path="/register" element={<Register />} />
      <Route path="/login" element={<Login />} />
      <Route path="/browse-jobs" element={<Browsejobs />} />
+     <Route path="/jobseeker-dashboard" element={<JobSeekerDashboard />} />
+     <Route path="/recruiter-dashboard" element={<RecruiterDashboard />} />
+     <Route path="/post-job" element={<PostJob />} />
      </Routes>
     </Router>
     </>

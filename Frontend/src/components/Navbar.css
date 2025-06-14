@@ -50,12 +50,19 @@
   cursor: pointer;
 }
 
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .nav-center .logo {
   color: #ffffff;
   font-size: 26px;
   font-weight: 600;
   text-decoration: none;
   text-shadow: 0 0 9px #e8efed;
+  
 }
 
 .nav-right .btn{
@@ -81,13 +88,97 @@
   color: #085757;
 }
 
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.user-name {
+  background: linear-gradient(135deg, #5af9f6, #099fa7);
+  color: white;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(106, 90, 249, 0.3);
+}
+.user-name:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(106, 90, 249, 0.5);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  background: white;
+  border: 1px solid #ececec;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  padding: 16px 18px;
+  border-radius: 12px;
+  min-width: 200px;
+  z-index: 1000;
+  animation: fadeScale 0.3s ease forwards;
+  transform-origin: top right;
+}
+
+.dropdown-menu p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #555;
+}
+
+.dropdown-link {
+  display: block;
+  color: #007b8a;
+  text-decoration: none;
+  margin: 8px 0;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.dropdown-link:hover {
+  color: #004d5a;
+  transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu button {
+  width: 100%;
+  background: #ff5e57;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dropdown-menu button:hover {
+  background-color: #e60000;
+  transform: translateX(5px);
+}
+/* Arrow Icon Next to Username */
+.arrow-icon {
+  margin-left: 8px;
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
 
 @media screen and (max-width: 768px) {
   .nav-left .burger {
     display: block;
   }
    
-
   .nav-left .nav-links {
     display: none;
     position: absolute;
@@ -103,5 +194,15 @@
 
   .nav-left .nav-links.show {
     display: flex;
+  }
+}
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

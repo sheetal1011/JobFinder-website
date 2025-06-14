@@ -1,7 +1,7 @@
 import React , {useState} from "react";
 import "./Register.css";
 import axios from "axios";
-import {useNavigate , navigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import registerleft from "../assets/image4.png";
 
 const Register = () => {
@@ -19,6 +19,8 @@ const Register = () => {
       [e.target.name]: e.target.value 
     });
   };
+  
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +28,7 @@ const Register = () => {
       // send data to backend
       const res = await axios.post("http://localhost:5000/api/auth/register", formData);
       alert(res.data.message); // show success
+      navigate("/login");
     } catch (err) {
       alert(err.response?.data?.message || "Something went wrong");
     }
