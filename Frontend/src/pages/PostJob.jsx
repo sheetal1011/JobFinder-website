@@ -11,7 +11,9 @@ const PostJob = () => {
     company: "",
     location: "",
     type: "Full-Time",
-    description: ""
+    description: "",
+    salary: "",
+    category: "",
   });
 
   const handleChange = (e) => {
@@ -38,13 +40,22 @@ const PostJob = () => {
       <h2>Post a New Job</h2>
       <form onSubmit={handleSubmit} className="post-job-form">
         <input type="text" name="title" placeholder="Job Title" required value={formData.title} onChange={handleChange} />
-        <input type="text" name="company" placeholder="Company Name" required value={formData.company} onChange={handleChange} />
+        <input type="text" name="company" placeholder="Organization" required value={formData.company} onChange={handleChange} />
         <input type="text" name="location" placeholder="Location" required value={formData.location} onChange={handleChange} />
+        <input type="text" name="salary" placeholder="Salary" required value={formData.salary} onChange={handleChange} />
 
         <select name="type" value={formData.type} onChange={handleChange}>
           <option value="Full-Time">Full-Time</option>
           <option value="Part-Time">Part-Time</option>
           <option value="Internship">Internship</option>
+        </select>
+        <select name="category" value={formData.category} onChange={handleChange} required>
+          <option value="">Select Category</option>
+          <option value="IT">IT Jobs</option>
+          <option value="Product">Product-Based</option>
+          <option value="Government">Government</option>
+          <option value="Freelance">Freelance</option>
+          <option value="Startup">Startup</option>
         </select>
 
         <textarea name="description" placeholder="Job Description" required value={formData.description} onChange={handleChange}></textarea>

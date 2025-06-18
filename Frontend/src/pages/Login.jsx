@@ -20,7 +20,7 @@ const Login = () => {
       const { token, role, name } = res.data;
       // Step 1: Save data in localStorage
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify({ name, role }));
+      localStorage.setItem("user", JSON.stringify({token, name, role }));
 
       // Step 2: Show welcome message
       alert(`Welcome ${name}, you are logged in as a ${role}`);
